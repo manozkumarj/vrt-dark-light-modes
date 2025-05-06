@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@layer theme, base, components, utilities;
+
+/* Define a custom variant for dark mode */
+@variant dark (&:where(.dark, .dark *)); /* <body class="dark"> */ 
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *)); /* <body data-theme="dark"> */
+
+@layer base {
+  :root {
+    --text-fg: #dc4646;
+    --dynamic-bg: #dc4646;
+  }
+  
+  .dark {
+    --dynamic-bg: #232f4d;
+  }
+
+  [data-theme="dark"] {
+    --dynamic-bg: #232f4d;
+  }
+}
+
+/* `inline` is necessary to make it work */
+@theme inline {
+  --color-fg: var(--text-fg);
+  --color-dynamic-bg: var(--dynamic-bg);
+}
