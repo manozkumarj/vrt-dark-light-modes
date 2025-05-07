@@ -9,11 +9,11 @@ export default function Navbar() {
 
   return (
     <main>
-      <nav className="flex justify-between px-8 items-center py-6 bg-dynamic-bg">
+      <nav className="flex justify-between px-8 items-center py-6 bg-dynamic-navbar-bg shadow-[0px_7px_6px_0px_rgba(0,_0,_0,_0.1)] dark:shadow-[0px_7px_6px_0px_rgba(1,_1,_1,_0.4)]">
         <div className="flex items-center gap-8">
           <section className="flex items-center gap-4">
             {/* logo */}
-            <Link to={"/"} className="text-white text-4xl font-mono">
+            <Link to={"/"} className="text-4xl font-mono text-dynamic-text">
               DarkMode
             </Link>
           </section>
@@ -21,9 +21,17 @@ export default function Navbar() {
         {/* last section */}
         <section className="flex items-center gap-4 cursor-pointer">
           {theme === "dark" ? (
-            <FiSun color="white" size="26px" onClick={toggleTheme} />
+            <FiSun
+              color="var(--dynamic-text)"
+              size="26px"
+              onClick={toggleTheme}
+            />
           ) : (
-            <FaMoon color="white" size="25px" onClick={toggleTheme} />
+            <FaMoon
+              color="var(--dynamic-text)"
+              size="25px"
+              onClick={toggleTheme}
+            />
           )}
         </section>
       </nav>

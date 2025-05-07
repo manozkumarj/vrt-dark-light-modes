@@ -1,2 +1,3 @@
 * https://github.com/tailwindlabs/tailwindcss/discussions/15083
+* https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4#2.-using-css-variables
 * 

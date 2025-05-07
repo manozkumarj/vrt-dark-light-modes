@@ -7,21 +7,29 @@
 
 @layer base {
   :root {
-    --text-fg: #dc4646;
-    --dynamic-bg: #dc4646;
+    --dynamic-bg: #fff;
+    --dynamic-text: #232f4d;
+    --dynamic-navbar-bg: #fff;
+    --dynamic-navbar-shadow: shadow-[0px_7px_6px_0px_rgba(0,_0,_0,_0.1)];
   }
   
-  .dark {
+  /* .dark {
     --dynamic-bg: #232f4d;
-  }
+    --dynamic-text: #232f4d;
+  } */
 
   [data-theme="dark"] {
     --dynamic-bg: #232f4d;
+    --dynamic-text: #fff;
+    --dynamic-navbar-bg: #232f4d;
+    --dynamic-navbar-shadow: shadow-[0px_7px_6px_0px_rgba(1,_1,_1,_1.1)]
   }
 }
 
 /* `inline` is necessary to make it work */
 @theme inline {
-  --color-fg: var(--text-fg);
   --color-dynamic-bg: var(--dynamic-bg);
+  --color-dynamic-text: var(--dynamic-text);
+  --color-dynamic-navbar-bg: var(--dynamic-navbar-bg);
+  --box-shadow-dynamic-navbar-shadow: var(--dynamic-navbar-shadow)
 }

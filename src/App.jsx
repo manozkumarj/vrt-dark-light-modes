@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="app">
+    <div className="app bg-dynamic-bg">
       <Navbar />
       <div className="min-h-screen p-24">
         <Routes>
