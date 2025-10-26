@@ -1,4 +1,3 @@
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { FiSun } from "react-icons/fi";
 import { FaMoon } from "react-icons/fa";
